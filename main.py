@@ -102,7 +102,7 @@ _DEAD_INDICATORS = (
 )
 
 # ========== BOT CLIENT ==========
-bot = TelegramClient('hexaxshchkrx_bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+bot = TelegramClient('hexaxshchkrx_bot', API_ID, API_HASH)
 
 # ========== CREDITS SYSTEM ==========
 def load_credits():
@@ -3996,6 +3996,9 @@ async def main():
     print("=" * 60)
     print("CC CHECKER BOT - STARTING")
     print("=" * 60)
+    
+    # ✅ bot ကို ဒီမှာ start လုပ်
+    await bot.start(bot_token=BOT_TOKEN)
     
     print("[*] Resolving chat IDs...")
     await resolve_chat_ids()
